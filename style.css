@@ -4,16 +4,26 @@ body {
     padding: 0;
     background: linear-gradient(120deg, #ff9a9e, #fad0c4);
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    display: flex;
+    align-items: center;
     background: #fff;
-    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+}
+
+main {
     text-align: center;
+    flex: 1;
+    padding: 0 20px;
 }
 
 header h1 {
@@ -21,7 +31,7 @@ header h1 {
     font-size: 2rem;
 }
 
-main p {
+.message p {
     line-height: 1.6;
     font-size: 1.1rem;
     margin: 10px 0;
@@ -49,4 +59,14 @@ footer button {
 
 footer button:hover {
     background: #e55b51;
+}
+
+.photo {
+    flex: 0 0 150px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
