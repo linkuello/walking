@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
@@ -87,6 +87,23 @@ footer button:hover {
     transform: translateY(200%);
 }
 
+/* Стили для фотографий */
+.photo {
+    flex: 0 0 150px;
+    margin: 0 10px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
 /* Стили фейерверков */
 .fireworks {
     position: absolute;
@@ -128,5 +145,54 @@ footer button:hover {
     to {
         transform: scale(3);
         opacity: 0;
+    }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .photo {
+        flex: 0 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .photo img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .message p {
+        font-size: 1rem;
+    }
+
+    footer button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    #thank-you p {
+        font-size: 1rem;
+    }
+
+    .flowers {
+        width: 100px;
+    }
+
+    .fireworks {
+        width: 8px;
+        height: 8px;
     }
 }
